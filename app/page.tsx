@@ -58,9 +58,6 @@ export default function Home() {
               <li>✅ API Route Generator</li>
               <li>✅ Test Runner</li>
             </ul>
-            <div className="mt-4 text-xs text-green-400 font-semibold">
-              💰 $5,000 - Infinity Build Award
-            </div>
           </div>
 
           {/* Kestra Workflows */}
@@ -77,9 +74,6 @@ export default function Home() {
               <li>✅ Code Quality Agent</li>
               <li>✅ Deployment Decisions</li>
             </ul>
-            <div className="mt-4 text-xs text-green-400 font-semibold">
-              💰 $4,000 - Wakanda Data Award
-            </div>
           </div>
 
           {/* Oumi RL */}
@@ -96,9 +90,6 @@ export default function Home() {
               <li>✅ Quality Predictor</li>
               <li>✅ Model Fine-tuning</li>
             </ul>
-            <div className="mt-4 text-xs text-green-400 font-semibold">
-              💰 $3,000 - Iron Intelligence Award
-            </div>
           </div>
 
           {/* Vercel Deployment */}
@@ -115,9 +106,6 @@ export default function Home() {
               <li>✅ Edge network CDN</li>
               <li>✅ Live production site</li>
             </ul>
-            <div className="mt-4 text-xs text-green-400 font-semibold">
-              💰 $2,000 - Stormbreaker Award
-            </div>
           </div>
 
           {/* CodeRabbit */}
@@ -134,9 +122,6 @@ export default function Home() {
               <li>✅ Code quality insights</li>
               <li>✅ Best practices</li>
             </ul>
-            <div className="mt-4 text-xs text-green-400 font-semibold">
-              💰 $1,000 - Captain Code Award
-            </div>
           </div>
 
           {/* System Status */}
