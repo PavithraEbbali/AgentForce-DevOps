@@ -1,0 +1,47 @@
+id: code-quality-decision-agent
+namespace: agentforge
+description: AI Agent that evaluates code quality metrics and makes deployment decisions
+
+tasks:
+  - id: generate-metrics
+    type: io.kestra.plugin.core.log.Log
+    message: |
+      Simulating code metrics collection...
+      Coverage: 85%, Complexity: 12, Issues: 3
+
+  - id: ai-quality-analysis
+    type: io.kestra.plugin.core.log.Log
+    message: |
+      🤖 AI Code Quality Agent - Analysis Report
+      
+      📊 Metrics Received:
+      - Test Coverage: 85%
+      - Code Complexity: 12
+      - Issues Found: 3
+      - Tests Passed: 47
+      - Tests Failed: 2
+      
+      🧠 AI EVALUATION:
+      ✅ COVERAGE: Excellent (85% >= 80% threshold)
+      ✅ COMPLEXITY: Acceptable (12 <= 15 threshold)
+      ✅ ISSUES: Minimal (3 < 5 critical threshold)
+
+  - id: deployment-decision
+    type: io.kestra.plugin.core.log.Log
+    message: |
+      🚀 AI DEPLOYMENT DECISION:
+      
+      ✅ AUTO-APPROVE DEPLOYMENT
+      All quality gates passed. Safe to deploy to production.
+      
+      Next Actions:
+      - Notify team via Slack/Email
+      - Update deployment dashboard
+      - Log decision in audit trail
+      
+      Timestamp: {{ now() }}
+
+triggers:
+  - id: daily-quality-check
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 9 * * *"
