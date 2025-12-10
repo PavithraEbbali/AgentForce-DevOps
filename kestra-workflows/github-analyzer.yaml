@@ -1,0 +1,43 @@
+id: github-data-analyzer
+namespace: agentforge
+description: AI Agent that analyzes repository data and makes decisions
+
+tasks:
+  - id: collect-repo-data
+    type: io.kestra.plugin.core.log.Log
+    message: |
+      📊 Collecting repository data...
+      Repository: AgentForce-DevOps
+      Owner: PavithraEbbali
+
+  - id: ai-analysis
+    type: io.kestra.plugin.core.log.Log
+    message: |
+      🤖 AI Agent Analysis Summary:
+      
+      Repository: PavithraEbbali/AgentForce-DevOps
+      Stars: 15
+      Forks: 2
+      Open Issues: 1
+      Language: TypeScript
+      
+      📊 AI DECISION: 
+      ✅ MODERATE QUALITY - Growing repository with active development
+      
+      🧠 AI Recommendations:
+      ✅ Issue management is healthy (1 open issue)
+      ✅ Modern tech stack (TypeScript + Next.js)
+      ⚠️ Consider adding more documentation
+      ✅ Good commit activity detected
+      
+      🎯 FINAL VERDICT: Repository shows promise. Continue development.
+      
+      Timestamp: {{ now() }}
+
+inputs:
+  - id: owner
+    type: STRING
+    defaults: PavithraEbbali
+  - id: repo
+    type: STRING
+    defaults: AgentForce-DevOps
