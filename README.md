@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 AgentForge DevOps
 
-## Getting Started
+A proof-of-concept DevOps orchestration platform demonstrating how AI agents, RL models, and automation tools can be coordinated through a central dashboard.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-15-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Python](https://img.shields.io/badge/Python-3.11-green)
 
-```bash
+---
+
+## 🎯 Problem Statement
+
+Modern development teams face critical challenges:
+- Time-consuming code reviews create deployment bottlenecks
+- Inconsistent code quality from manual review processes
+- Repetitive development tasks reduce productivity
+
+AgentForge demonstrates an orchestration layer that coordinates multiple AI/automation tools to address these pain points.
+
+---
+
+## ✨ Key Components
+
+### 🛠️ Automated Code Generation
+CLI tools for rapid component and API scaffolding with built-in testing
+
+### 🔄 AI Workflow Orchestration
+Multi-step workflows that analyze repositories and make intelligent deployment decisions
+
+### 🧠 Reinforcement Learning
+ML model trained to predict code quality using GRPO algorithm
+
+### 🚀 Cloud Deployment
+Auto-deployment pipeline with edge network distribution
+
+### 🐰 Intelligent Code Review
+Automated PR analysis with best practice recommendations
+
+---
+
+## 🚀 Quick Start
+
+Clone repository
+git clone https://github.com/PavithraEbbali/AgentForce-DevOps.git
+cd AgentForge-DevOps
+
+Install dependencies
+npm install
+
+Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` for the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Component Usage
 
-## Learn More
+### Generate Code
+node cline-scripts/component-generator.js ComponentName
+node cline-scripts/api-generator.js EndpointName
 
-To learn more about Next.js, take a look at the following resources:
+### Run Workflows
+docker run -p 8081:8080 kestra/kestra:latest server local
+Access at http://localhost:8081
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Train Model
+python -m venv oumi-env
+.\oumi-env\Scripts\activate
+python oumi-training/train-model.py
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AgentForge-DevOps/
+├── app/ # Next.js application
+│ ├── page.tsx # Main dashboard UI
+│ ├── layout.tsx # Root layout
+│ └── api/ # API routes
+│ ├── codeanalysis/ # Code analysis endpoint
+│ └── workflowstatus/ # Workflow status endpoint
+├── src/
+│ └── components/ # React components
+│ ├── Dashboard.tsx
+│ ├── CodeQualityCard.tsx
+│ └── DashboardCard.tsx
+├── cline-scripts/ # CLI automation tools
+│ ├── component-generator.js
+│ ├── api-generator.js
+│ └── test-runner.js
+├── kestra-workflows/ # AI workflow definitions
+│ ├── github-analyzer.yaml
+│ └── code-quality-agent.yaml
+├── oumi-training/ # RL model training
+│ ├── train-model.py
+│ └── model-output/
+│ └── model_metadata.json
+├── public/ # Static assets
+├── .clinerules # Cline configuration
+├── README.md # Documentation
+└── package.json # Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## 🔗 Links
+
+**Live Demo**: https://agent-force-dev-ops.vercel.app  
+**GitHub**: https://github.com/PavithraEbbali/AgentForce-DevOps
+
+---
+
+## 👤 Author
+
+**Pavithra Ebbali**  
+Computer Science Student  
+GitHub: [@PavithraEbbali](https://github.com/PavithraEbbali)
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+Built with: Cline, Kestra, Oumi, Vercel, CodeRabbit
+
