@@ -71,34 +71,37 @@ python oumi-training/train-model.py
 
 ## 📁 Project Structure
 
+```
 AgentForge-DevOps/
-├── app/ # Next.js application
-│ ├── page.tsx # Main dashboard UI
-│ ├── layout.tsx # Root layout
-│ └── api/ # API routes
-│ ├── codeanalysis/ # Code analysis endpoint
-│ └── workflowstatus/ # Workflow status endpoint
+├── app/                          # Next.js application
+│   ├── page.tsx                 # Main dashboard UI
+│   ├── layout.tsx               # Root layout
+│   └── api/                     # API routes
+│       ├── codeanalysis/
+│       │   └── route.ts
+│       └── workflowstatus/
+│           └── route.ts
 ├── src/
-│ └── components/ # React components
-│ ├── Dashboard.tsx
-│ ├── CodeQualityCard.tsx
-│ └── DashboardCard.tsx
-├── cline-scripts/ # CLI automation tools
-│ ├── component-generator.js
-│ ├── api-generator.js
-│ └── test-runner.js
-├── kestra-workflows/ # AI workflow definitions
-│ ├── github-analyzer.yaml
-│ └── code-quality-agent.yaml
-├── oumi-training/ # RL model training
-│ ├── train-model.py
-│ └── model-output/
-│ └── model_metadata.json
-├── public/ # Static assets
-├── .clinerules # Cline configuration
-├── README.md # Documentation
-└── package.json # Dependencies
-
+│   └── components/              # React components
+│       ├── Dashboard.tsx
+│       ├── CodeQualityCard.tsx
+│       └── DashboardCard.tsx
+├── cline-scripts/               # CLI automation tools
+│   ├── component-generator.js
+│   ├── api-generator.js
+│   └── test-runner.js
+├── kestra-workflows/            # AI workflow definitions
+│   ├── github-analyzer.yaml
+│   └── code-quality-agent.yaml
+├── oumi-training/               # RL model training
+│   ├── train-model.py
+│   └── model-output/
+│       └── model_metadata.json
+├── public/                      # Static assets
+├── .clinerules                 # Cline configuration
+├── README.md                   # Documentation
+└── package.json                # Dependencies
+```
 
 ---
 
